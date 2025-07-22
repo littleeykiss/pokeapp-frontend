@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { SearchForm } from './components/search-form/search-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  standalone: true,
+  imports: [SearchForm],
+  template: `
+    <h1 style="text-align: center; color: #ef5350; margin-top: 2rem;">
+      PokeAPI Angular
+    </h1>
+    <app-search-form />
+  `,
 })
-export class App {
-  protected readonly title = signal('pokeapp-frontend');
-}
+export class AppComponent {}

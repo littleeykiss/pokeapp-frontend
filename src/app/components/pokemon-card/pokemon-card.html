@@ -1,0 +1,20 @@
+<div class="pokemon-card">
+  <h2>{{ pokemon.nombre | titlecase }}</h2>
+  <img [src]="'data:image/png;base64,' + pokemon.imagenBase64" alt="{{ pokemon.nombre }}" />
+
+  <div class="info">
+    <p><strong>Especie:</strong> {{ pokemon.especie }}</p>
+    <p><strong>Tipos:</strong> {{ pokemon.tipos.join(', ') }}</p>
+    <p><strong>Habilidades:</strong> {{ pokemon.habilidades.join(', ') }}</p>
+    <p><strong>Ataques:</strong> {{ pokemon.ataques.join(', ') }}</p>
+  </div>
+
+  <div class="stats">
+    <h3>Estadísticas</h3>
+    <ul>
+      <li *ngFor="let stat of pokemon.estadisticas">
+        {{ stat.nombre | titlecase }}: {{ stat.valor }}
+      </li>
+    </ul>
+  </div>
+</div>
