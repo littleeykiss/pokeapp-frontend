@@ -48,3 +48,5 @@ npm install
 
 # Arranca la app
 ng serve
+
+<img width="1609" height="1022" alt="image" src="https://github.com/user-attachments/assets/f3d9995a-8d5d-4a4b-8965-8834af43f596" />
